@@ -1,0 +1,23 @@
+.composition
+  position: relative
+  @include respond(phone)
+    display: none
+  @include respond(tab-port)
+    display: none
+  &__item
+    position: absolute
+    &_n1
+      width: 60%
+      top: -2rem
+      left: 10rem
+    &_n2
+      top: -8rem
+      left: 15rem
+    &_n3
+      top: 16rem
+      left: 34rem
+      backdrop-filter: blur(.2rem)
+    &_n4
+      top: 7rem
+      left: 1rem
+      backdrop-filter: blur(.2rem)

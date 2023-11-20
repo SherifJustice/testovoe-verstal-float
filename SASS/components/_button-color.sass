@@ -1,0 +1,32 @@
+.btn-color
+  &_text-blue                     // Белая кнопка с синим текстом
+    &:link, &:visited
+      @include style-link($blue-color-dark, $color-white)
+      @include btn-color
+      @include respond(phone)
+        height: 5rem
+        font-size: 2rem
+  &_text-green                      // Белая кнопка с зелёным текстом
+    &:link, &:visited
+      @include style-link($green-color-light, $color-white)
+      @include btn-color
+      @include respond(phone)
+        height: 5rem
+        font-size: 2rem
+  &_green 
+    &:link, &:visited              // Зелёная кнопка с белым текстом
+      @include style-color-btn($color-white, $green-color-light)
+      @include btn-color
+      @include respond(phone)
+        height: 5rem
+        font-size: 2.3rem
+  &_blue                            // Синяя кнопка с белым текстом
+    &:link, &:visited
+      @include style-color-btn($color-white, $blue-color-dark)
+      @include btn-color
+      @include respond(phone)
+        width: 34rem
+        height: 5rem
+        margin-bottom: 1rem
+        font-size: 2rem
+

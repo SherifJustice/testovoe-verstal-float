@@ -1,0 +1,109 @@
+.section-about
+  padding-top: 5rem
+  background: $color-white
+  padding-bottom: 5rem
+  @include respond(phone)
+    padding-bottom: 2rem
+    padding-top: 4rem
+.btn-mobile
+  @include respond(phone)
+    text-align: center
+    width: 100%
+
+
+.section-values
+  padding-top: 4rem
+  background: $gray-color-light
+  overflow: hidden  
+  padding-bottom: 10rem
+  @include respond(phone)
+    padding-bottom: 2rem
+    padding-top: 1rem
+
+
+.section-practice
+  background: url("../img/practice-bg.jpg") center / cover no-repeat
+  height: 40rem
+  position: relative
+  text-align: center
+  @include respond(phone)
+    background: url("../img/practice-bg-mob.jpg") center / cover no-repeat
+    height: 36rem
+  
+  &__bg
+    background: rgba(0, 47, 61, 0.7)
+    height: 40rem
+    @include respond(phone)
+      background: rgba(0, 47, 61, 0.5)
+      height: 36rem
+  &__box
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    @include respond(phone)
+      width: 98%
+
+
+.section-growht
+  background: linear-gradient(163deg,rgba(40,228,115, .72), rgba(39, 221, 209, 0.39) 57.4%, rgba(39, 221, 209, 0.39) 57.4%, rgba(5, 196, 203, 0.32) 82.7%), linear-gradient(123deg,rgba(255,255,255, .82), rgba(255,255,255, 0.8) 57.4%)
+  box-shadow: $box-shadow
+  padding-bottom: 10rem
+  @include respond(phone)
+    padding-bottom: 1rem
+
+  
+
+.growht__video
+  position: relative
+  &_img
+    @include respond(phone)
+      position: relative
+      width: 100%
+      margin: 0
+      padding: 1rem 1rem 0rem 1rem
+  &_icon
+    @include respond(phone)
+      margin: 0
+      padding-left: 0
+      position: absolute
+      right: 42%
+      top: 36%
+      height: 8rem
+    position: absolute
+    right: 50%
+    top: 40%
+    
+  
+.section-questions
+  background: linear-gradient(163deg,rgba(40,228,115, .72), rgba(39, 221, 209, 0.39) 57.4%, rgba(39, 221, 209, 0.39) 57.4%, rgba(5, 196, 203, 0.32) 82.7%), linear-gradient(123deg,rgba(255,255,255, .82), rgba(255,255,255, 0.8) 57.4%)
+  box-shadow: $box-shadow
+  padding-bottom: 4rem
+  padding-top: 4rem
+  padding-left: 2rem
+  height: 53rem
+  @include respond(phone)
+    padding-top: 0rem
+    padding-right: 1rem
+    height: 62rem
+    padding-bottom: 7rem
+    overflow: hidden
+
+.questions-image
+  float: right
+  padding-right: 5rem
+  @include respond(phone)
+    display: none
+  @include respond(tab-port)
+    display: none
+
+
+.section-interview
+  background: url("../img/bg-form.jpg") center / cover no-repeat
+  &__bg
+    padding: 6rem 22rem
+    background: rgba(0, 47, 61, 0.5)
+    @include respond(phone)
+      padding: 2rem
+
+    

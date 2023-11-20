@@ -1,0 +1,140 @@
+.interview
+  height: 72rem
+  background: $blue-color-dark
+  opacity: .9
+  text-align: center
+  @include respond(phone)
+    height: -1rem
+
+
+.form
+  width: 100%
+  padding-top: 4rem
+  @include respond(phone)
+    padding: 1rem
+  &__group
+    &_text
+      font-weight: 700
+      color: $color-white
+      padding-top: 1.7rem
+      margin-right: 20rem
+      margin-bottom: 1rem
+      @include respond(phone)
+        margin-right: 1rem
+        padding-top: 2rem
+
+    &_questions
+      padding-top: 1.7rem
+  &__group:not(:last-child)
+    margin-bottom: .6rem
+    @include respond(phone)
+      width: 47rem
+      margin-bottom: .6rem
+      margin-left: -5rem
+
+
+  
+  &__input
+    padding: 1.4rem 0rem 1.1rem 1.6rem
+    border: .1rem solid rgba(102, 102, 102, 0.90)
+    border-radius: .5rem
+    background: $color-white
+    font-weight: 300
+    font-size: 1.8rem
+    width: 60%
+    @include respond(phone)
+      width: 65%
+      margin-right: 3rem
+    &:focus
+      outline: none
+      border: .2rem solid $green-color-light
+      box-shadow: $box-shadow
+      background: url('../../icons/valid-form.svg'), $color-white
+      -webkit-background-size: 3.1rem
+      background-size: 3.1rem
+      background-repeat: no-repeat
+      background-position: 45rem .7rem 
+    &:focus:invalid
+      border: .2rem solid #FD7583
+      background: url('../../icons/invalid-form.svg'), $color-white
+      -webkit-background-size: 3.1rem
+      background-size: 3.1rem
+      background-repeat: no-repeat
+      background-position: 45rem .7rem 
+
+  &__input_questions
+    padding: 1.4rem 0rem 6.1rem 1.6rem
+    border: .1rem solid rgba(102, 102, 102, 0.90)
+    border-radius: .5rem
+    background: $color-white
+    font-weight: 300
+    font-size: 1.8rem
+    width: 60%
+    height: 11rem
+    &:focus
+      outline: none
+    @include respond(phone)
+      padding: 1rem 3rem 1rem 2rem
+      width: 89%
+      height: 5rem
+
+  &__input-radio
+    display: none
+      
+  &__group-radio
+    width: 60%
+    &:not(:last-child)
+    margin-bottom: .7rem
+
+  &__label-radio
+    color: $color-white
+    cursor: pointer
+    position: relative
+    padding-left: 3rem
+  &__button-radio
+    height: 2rem
+    width: 2rem
+    border-radius: 50%
+    border: .1rem solid $color-white
+    display: block
+    position: absolute
+    left: 0
+    top: .3rem
+    &::after
+      content: ""
+      display: block
+      height: 1.3rem
+      width: 1.3rem
+      border-radius: 50%
+      background: $color-white
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      transition: .2s all
+  // &__button_questions
+  //   width: 2.4rem
+  &__button_clip
+    padding-left: .5rem
+    padding-top: .5rem
+    width: 2.5rem
+    transform: rotate(90deg)
+    margin-right: -1.5rem
+    @include respond(phone)
+      display: none
+      position: absolute
+      width: 2.2rem
+      transform: translate(-1px, 7px)
+  &__button_clip-1
+    @include respond(phone)
+      display: none
+    margin-right: -1.5rem
+    padding-left: .5rem
+    padding-top: .5rem
+    opacity: 0
+    width: 2.5rem
+    transform: rotate(90deg)
+
+  &__input-radio:checked ~ &__label-radio &__button-radio::after
+    opacity: 1

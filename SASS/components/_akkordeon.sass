@@ -1,0 +1,65 @@
+.questions
+  padding-top: 4.5rem
+  background: rgba(40, 228, 115, 0.16), rgba(70, 205, 22, 0.14), rgba(39, 221, 209, 0.39), rgba(5, 176, 213, 0.32)
+  backdrop-filter: blur(.35rem)
+  
+  &__item
+    margin-bottom: 2rem
+  &__title
+    text-decoration-line: underline
+    display: block
+    cursor: pointer
+    padding-left: 3.5rem
+    position: relative
+    font-size: 2rem
+    text-shadow: 0rem .4rem .4rem rgba($color-black, .2)
+    transition: all 1s 
+    @include respond(phone)
+      display: none
+  &__title-mob
+    @include respond(phone)
+      text-decoration-line: underline
+      display: block
+      cursor: pointer
+      padding-left: 3.5rem
+      position: relative
+      font-size: 2rem
+      text-shadow: 0rem .4rem .4rem rgba($color-black, .2)
+      transition: all 1s 
+    @include respond(questions)
+      display: none
+  &__img
+    position: absolute
+    transition: all .4s 
+    margin-top: -2.1rem
+    @include respond(phone)
+      margin-top: -5.1rem
+
+
+  &__input
+    width: 0
+    height: 0
+    -webkit-appearance: none
+    appearance: none
+    position: absolute
+    
+  &__input:checked ~ &__text
+    transform: scaleY(1)
+    transition: transform .5s cubic-bezier(0.68, -0.6, 0.32, 1.6)
+    height: 100%
+    opacity: 1
+    background: linear-gradient(123deg,rgba(182, 181, 181, 0.2),  57.4%)
+
+  &__input:checked ~ &__img 
+    transform: rotate(90deg)
+
+  &__text
+    padding: .2rem 3.5rem
+    transform: scaleY(0)
+    transition: all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6)
+    height: 0
+    opacity: 0
+    color: $color-gray
+    text-shadow: 0rem .4rem .4rem rgba($color-black, .2)
+
+
